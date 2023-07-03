@@ -1,7 +1,7 @@
 {
   "name": "jemeel-tut",
   "version": "0.1.0",
-  "homepage": "hhtps://jemeelsanni.github.io/jem_shop",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.3",
