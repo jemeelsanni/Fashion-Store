@@ -9,13 +9,13 @@ import {
   Outlet,
   RouterProvider,
   ScrollRestoration,
-} from "react-router-dom"
+} from "react-router-dom";
 import { productsData } from "./api/Api";
 import Product from "./components/Product";
 import Login from "./pages/Login";
 
-const Layout=()=>{
-  return(
+const Layout = () => {
+  return (
     <div>
       <Header />
       <ScrollRestoration />
@@ -26,41 +26,38 @@ const Layout=()=>{
 };
 
 const router = createBrowserRouter([
-    {
-      path:"/",
-      element:<Layout />,
-      index
-      children:[
-        {
-          path:"/",
-          element: <Home />,
-          loader:productsData,
-        },
-        {
-          path: "/product/:id",
-          element: <Product />,
-        },
-        {
-          path:"/cart",
-          element: <Cart />,
-        },
-        {
-          path:"/login",
-          element: <Login />,
-        },
-      ],
-    },
+  {
+    path: "/",
+    element: <Layout />,
+
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+        loader: productsData,
+      },
+      {
+        path: "/product/:id",
+        element: <Product />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
+      },
+      {
+        path: "/login",
+        element: <Login />,
+      },
+    ],
+  },
 ]);
 
-
 function App() {
- 
- return (
-   <div className=" font-bodyFont">
-     <RouterProvider router={router}/>
-   </div>
-    
- );
+  return (
+    <div className=" font-bodyFont">
+      <RouterProvider router={router} />
+    </div>
+  );
 }
 
 export default App;
