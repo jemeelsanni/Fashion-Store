@@ -16,6 +16,7 @@ const Product = () => {
   }, []);
   return (
     <div>
+      <div></div>
       <div className=" tablet:max-w-screen-xl m-10 flex tablet:flex-row mobile:flex-col gap-10">
         <div className=" tablet:w-2/5 mobile:w-full relative  ">
           <img
